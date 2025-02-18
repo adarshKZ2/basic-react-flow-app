@@ -5,6 +5,8 @@ import {
   useNodesState,
   useEdgesState,
   addEdge,
+  Background,
+  BackgroundVariant,
 } from "@xyflow/react";
 
 import "@xyflow/react/dist/style.css";
@@ -40,13 +42,17 @@ function Flowgraph() {
     [setEdges]
   );
   return (
-    <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      onConnect={onConnect}
-    />
+    <>
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onConnect={onConnect}
+      >
+        <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
+      </ReactFlow>
+    </>
   );
 }
 
