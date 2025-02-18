@@ -7,6 +7,8 @@ import {
   addEdge,
   Background,
   BackgroundVariant,
+  Controls,
+  MiniMap,
 } from "@xyflow/react";
 
 import "@xyflow/react/dist/style.css";
@@ -51,6 +53,8 @@ function Flowgraph() {
         onConnect={onConnect}
       >
         <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
+        <Controls />
+        <MiniMap />
       </ReactFlow>
     </>
   );
